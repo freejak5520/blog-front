@@ -1,10 +1,10 @@
 "use server";
 
 import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
+import { NextResponse } from "next/server";
 
-export const GET = () => {
+export const POST = () => {
   cookies().delete(process.env.TOKEN_COOKIE_NAME);
 
-  return redirect("/");
+  return NextResponse.json({ message: "Logout successful" });
 };

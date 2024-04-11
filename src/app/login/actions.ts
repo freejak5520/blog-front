@@ -1,10 +1,11 @@
 "use server";
 
-import apiAxios from "@/lib/apiAxios";
+import getApiAxios from "@/lib/getApiAxios";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 export const loginAction = async (_: any, formData: FormData) => {
+  const apiAxios = await getApiAxios();
   try {
     const {
       data: { data },
