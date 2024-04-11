@@ -2,6 +2,7 @@
 
 import { atom, useRecoilState } from "recoil";
 import useAxios from "./useAxios";
+import { useCallback } from "react";
 
 const userAtom = atom<User | null>({
   key: "user",
@@ -18,5 +19,9 @@ export const useUser = () => {
     });
   }
 
-  return user;
+  const resetUser = useCallback(() => {
+    setUser(null);
+  }, [setUser]);
+
+  return { user, resetUser };
 };
