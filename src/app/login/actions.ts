@@ -4,7 +4,7 @@ import apiAxios from "@/lib/apiAxios";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-export const loginAction = async (formData: FormData) => {
+export const loginAction = async (_: any, formData: FormData) => {
   try {
     const {
       data: { data },
