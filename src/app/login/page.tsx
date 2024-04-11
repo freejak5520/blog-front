@@ -1,10 +1,10 @@
 "use client";
 
-import Input from "@/components/Input";
-import { loginAction } from "./actions";
 import Button from "@/components/Button";
+import Input from "@/components/Input";
 import Link from "next/link";
 import { useFormState } from "react-dom";
+import { loginAction } from "./actions";
 
 const LoginPage = () => {
   const [, login, pending] = useFormState(loginAction, null);
