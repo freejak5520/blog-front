@@ -31,7 +31,7 @@ const LoginPage = () => {
               </svg>
             </Link>
           </div>
-          <div className="text-2xl font-bold mb-6 mt-3">Logo</div>
+          <div className="text-2xl font-bold mb-6 mt-3">로그인</div>
         </div>
         <form action={login} className="flex flex-col gap-6">
           {pending && <div className="">Loading...</div>}
