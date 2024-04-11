@@ -7,12 +7,12 @@ import { useFormState } from "react-dom";
 import { loginAction } from "./actions";
 
 const LoginPage = () => {
-  const [, login, pending] = useFormState(loginAction, null);
+  const [, login] = useFormState(loginAction, null);
 
   return (
     <>
-      <div className="absolute inset-0 bg-black/5 blur"></div>
-      <div className="max-w-96 mx-auto w-full p-6 rounded-md bg-white z-10 shadow">
+      <div className="absolute inset-0 bg-black/5 blur -z-10"></div>
+      <div className="relative max-w-96 mx-auto w-full p-6 rounded-md bg-white shadow">
         <div className="flex flex-col justify-center items-center">
           <div className="w-full flex justify-end h-3">
             <Link href="/">
@@ -38,7 +38,6 @@ const LoginPage = () => {
           <div className="text-2xl font-bold mb-6 mt-3">로그인</div>
         </div>
         <form action={login} className="flex flex-col gap-6">
-          {pending && <div className="">Loading...</div>}
           <div className="flex flex-col gap-3">
             <Input
               type="text"
