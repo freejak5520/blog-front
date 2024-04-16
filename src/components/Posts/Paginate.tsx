@@ -1,0 +1,34 @@
+"use client";
+
+import { useSearchParams } from "next/navigation";
+import ReactPaginate from "react-paginate";
+
+const Paginate = ({
+  pageCount,
+  onClick,
+}: {
+  pageCount: number;
+  onClick?: (props: {
+    index: number | null;
+    selected: number;
+    nextSelectedPage: number | undefined;
+    event: object;
+    isPrevious: boolean;
+    isNext: boolean;
+    isBreak: boolean;
+    isActive: boolean;
+  }) => boolean | number | void;
+}) => {
+  const searchParams = useSearchParams();
+
+  return (
+    <ReactPaginate
+      className="flex justify-start items-center gap-4"
+      pageCount={pageCount}
+      forcePage={parseInt(searchParams?.get("page") || "1") - 1}
+      onClick={onClick}
+    />
+  );
+};
+
+export default Paginate;

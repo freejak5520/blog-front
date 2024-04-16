@@ -18,7 +18,9 @@ const RootLayout = ({
   return (
     <Providers>
       <html lang="ko">
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          <div className="max-w-screen-sm mx-auto">{children}</div>
+        </body>
       </html>
     </Providers>
   );
