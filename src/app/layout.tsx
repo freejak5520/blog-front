@@ -19,7 +19,7 @@ const RootLayout = ({
     <Providers>
       <html lang="ko">
         <body className={inter.className}>
-          <div className="max-w-screen-sm mx-auto">{children}</div>
+          <div className="max-w-screen-sm mx-auto py-20 px-4">{children}</div>
         </body>
       </html>
     </Providers>
