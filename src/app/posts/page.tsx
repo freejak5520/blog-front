@@ -1,10 +1,12 @@
-"use server";
-
 import Item from "@/components/Posts/Item";
-import Paginate from "@/components/Posts/Paginate";
 import { apiFetch } from "@/lib/getFetch";
 import { format } from "date-fns";
+import { Metadata } from "next";
 import PostPaginate from "./_components/PostPaginate";
+
+export const metadata: Metadata = {
+  title: "Posts",
+};
 
 const Posts = async ({ searchParams }: { searchParams: { page: string } }) => {
   const params = new URLSearchParams(searchParams);
