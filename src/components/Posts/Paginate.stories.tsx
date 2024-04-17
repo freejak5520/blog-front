@@ -3,6 +3,7 @@ import Paginate from "./Paginate";
 
 const meta = {
   component: Paginate,
+  tags: ["autodocs"],
 } satisfies Meta<typeof Paginate>;
 
 export default meta;

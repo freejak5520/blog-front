@@ -4,6 +4,7 @@ import Item from "./Item";
 const meta = {
   title: "Components/Posts/Item",
   component: Item,
+  tags: ["autodocs"],
   argTypes: {
     date: {
       type: "string",
