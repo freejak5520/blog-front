@@ -6,6 +6,8 @@ global.fetch = async () =>
     json: () =>
       Promise.resolve({
         data: {
+          id: 1,
+          slug: "zsh-option-arrow",
           title: "Zsh에서 Option + Arrow 키로 단어 단위 이동하기",
           content: `![](https://velog.velcdn.com/images/freejak5520/post/e132366f-b95b-49ad-91bf-4641631cc8b3/image.gif)
 
