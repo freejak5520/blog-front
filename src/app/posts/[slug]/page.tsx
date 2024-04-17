@@ -2,7 +2,6 @@
 
 import { apiFetch } from "@/lib/getFetch";
 import { format } from "date-fns";
-import Head from "next/head";
 import MarkdownContent from "../_components/MarkdownContent";
 
 const getPost = async (slug: string) => {
