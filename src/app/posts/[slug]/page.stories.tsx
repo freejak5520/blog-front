@@ -55,7 +55,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     params: {
-      id: "1",
+      slug: "zsh-option-arrow",
     },
   },
   loaders: [async () => ({})],
