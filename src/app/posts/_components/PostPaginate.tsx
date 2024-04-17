@@ -1,7 +1,7 @@
 "use client";
 
-import Paginate from "@/components/Posts/Paginate";
 import { useRouter, useSearchParams } from "next/navigation";
+import Paginate from "./Paginate";
 
 const PostPaginate = ({ pageCount }: { pageCount: number }) => {
   const searchParams = useSearchParams();

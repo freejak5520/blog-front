@@ -1,8 +1,8 @@
-import Item from "@/components/Posts/Item";
 import { apiFetch } from "@/lib/getFetch";
 import { format } from "date-fns";
 import { Metadata } from "next";
 import PostPaginate from "./_components/PostPaginate";
+import Item from "./_components/Item";
 
 export const metadata: Metadata = {
   title: "Posts",

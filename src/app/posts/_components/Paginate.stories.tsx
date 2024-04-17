@@ -2,6 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import Paginate from "./Paginate";
 
 const meta = {
+  title: "Components/Paginate",
   component: Paginate,
   tags: ["autodocs"],
 } satisfies Meta<typeof Paginate>;
