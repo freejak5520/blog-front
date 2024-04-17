@@ -10,9 +10,9 @@ const PostDetail = async ({ params }: { params: { id: string } }) => {
 
   return (
     <div>
-      <div className="text-3xl font-bold mb-9 text-gray-950 dark:text-gray-50">
+      <h1 className="text-3xl font-bold mb-9 text-gray-950 dark:text-gray-50">
         {data.title}
-      </div>
+      </h1>
       <div className="mb-8 text-sm text-gray-500 dark:text-gray-400 flex justify-end">
         {format(data.created_at, "PPP")}
       </div>
