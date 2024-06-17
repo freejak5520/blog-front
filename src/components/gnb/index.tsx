@@ -7,11 +7,11 @@ export default async function Gnb() {
   const { id, email } = await getSession();
 
   return (
-    <nav className="flex justify-between p-6">
+    <nav className="flex justify-between px-8 py-6">
       <Link href={"/"}>Home</Link>
 
       {id ? (
-        <div className="flex gap-4">
+        <div className="flex gap-6">
           <Link href={"/posts/create"}>New Post</Link>
           <div>{email}</div>
           <form action={logout}>
@@ -19,8 +19,9 @@ export default async function Gnb() {
           </form>
         </div>
       ) : (
-        <div>
+        <div className="flex gap-6">
           <Link href={"/login"}>Log in</Link>
+          <Link href={"/auth/join"}>Sign up</Link>
         </div>
       )}
     </nav>
