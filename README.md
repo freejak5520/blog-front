@@ -30,6 +30,5 @@ npm run storybook
 
 ## To-do
 
-- [ ] Sign Up Page
 - [ ] User Main Page
 - [ ] Markdown to text (for default description)
