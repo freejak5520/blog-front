@@ -17,13 +17,6 @@ exports[`NavBar render test 1`] = `
     >
       About
     </a>
-    <a
-      class="font-semibold"
-      href="https://github.com/freejak5520"
-      target="_blank"
-    >
-      GitHub
-    </a>
   </div>
 </div>
 `;

@@ -1,24 +1,15 @@
-import { Suspense } from "react";
+import Footer from "./_components/Footer";
 import Gnb from "@/components/gnb";
-import CommonLoading from "@/components/loading/Loading";
-
-export const Footer = () => {
-  return (
-    <div className="mt-20 text-sm text-gray-500 dark:text-gray-400">
-      © <time>2024.</time> freejak5520. All rights reserved.
-    </div>
-  );
-};
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <>
+    <div className="flex h-full min-h-dvh flex-col items-center">
       <Gnb />
-      <div className="mx-auto max-w-screen-md px-4 py-20">
+      <main className="mx-auto flex w-full max-w-screen-md flex-1 flex-col justify-between px-4 py-20">
         {children}
-        <Footer />
-      </div>
-    </>
+      </main>
+      <Footer />
+    </div>
   );
 };
 

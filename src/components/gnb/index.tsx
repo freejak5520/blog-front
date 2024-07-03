@@ -7,23 +7,41 @@ export default async function Gnb() {
   const { id, email } = await getSession();
 
   return (
-    <nav className="flex justify-between px-8 py-6">
-      <Link href={"/"}>Home</Link>
+    <nav className="navbar">
+      <div className="flex-1">
+        <Link href="/" className="btn btn-ghost text-xl">
+          Home
+        </Link>
+      </div>
 
-      {id ? (
-        <div className="flex gap-6">
-          <Link href={"/posts/create"}>New Post</Link>
-          <div>{email}</div>
-          <form action={logout}>
-            <button type="submit">Logout</button>
-          </form>
-        </div>
-      ) : (
-        <div className="flex gap-6">
-          <Link href={"/login"}>Log in</Link>
-          <Link href={"/auth/join"}>Sign up</Link>
-        </div>
-      )}
+      <div className="flex-none">
+        <ul className="menu menu-horizontal px-1">
+          {id ? (
+            <>
+              <li>
+                <div>{email}</div>
+              </li>
+              <li>
+                <Link href={"/posts/create"}>New Post</Link>
+              </li>
+              <li>
+                <form action={logout}>
+                  <button type="submit">Logout</button>
+                </form>
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link href={"/login"}>Log in</Link>
+              </li>
+              <li>
+                <Link href={"/auth/join"}>Sign up</Link>
+              </li>
+            </>
+          )}
+        </ul>
+      </div>
     </nav>
   );
 }
