@@ -9,13 +9,6 @@ const NavBar = () => {
       <Link className="font-semibold" href={"/about"}>
         About
       </Link>
-      <Link
-        className="font-semibold"
-        href={"https://github.com/freejak5520"}
-        target="_blank"
-      >
-        GitHub
-      </Link>
     </div>
   );
 };

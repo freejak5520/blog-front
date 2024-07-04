@@ -22,7 +22,9 @@ export default function RootLayout({
   return (
     <Providers>
       <html lang="ko">
-        <body className={cn("font-sans", fontSans.variable)}>{children}</body>
+        <body className={cn("min-h-dvh font-sans", fontSans.variable)}>
+          {children}
+        </body>
       </html>
     </Providers>
   );
