@@ -13,16 +13,16 @@ const PostItem = ({
 }) => {
   return (
     <div>
-      <h2 className="mb-2 mt-8 text-lg font-bold text-primary">
+      <h2 className="mb-2 mt-8 text-lg font-bold">
         <Link href={href}>{title}</Link>
       </h2>
-      <p className="mb-4 font-medium text-secondary">
+      <p className="mb-4 font-medium">
         {description}
-        <Link href={href} className="ml-2 text-sm font-bold text-secondary">
+        <Link href={href} className="ml-2 text-sm font-bold">
           더보기 →
         </Link>
       </p>
-      <div className="text-sm text-secondary">{date}</div>
+      <div className="text-sm">{date}</div>
     </div>
   );
 };

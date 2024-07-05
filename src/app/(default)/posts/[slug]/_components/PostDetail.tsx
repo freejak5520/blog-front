@@ -8,11 +8,9 @@ export default function PostDetail({ post }: { post?: Post }) {
   return (
     <div>
       <Suspense>
-        <h1 className="mb-8 text-3xl font-bold text-primary">
-          {post && post.title}
-        </h1>
+        <h1 className="mb-8 text-3xl font-bold">{post && post.title}</h1>
         {post && (
-          <div className="mb-16 flex justify-between text-sm text-gray-500 dark:text-gray-200">
+          <div className="mb-16 flex justify-between text-sm">
             <div>{dayjs(post.createdAt).format("YYYY-MM-DD")}</div>
             <div>
               <Link href={`/posts/${post.slug}/update`}>수정</Link>

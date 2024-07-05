@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <Providers>
-      <html lang="ko">
+      <html lang="ko" data-theme="light">
         <body className={cn("min-h-dvh font-sans", fontSans.variable)}>
           {children}
         </body>
